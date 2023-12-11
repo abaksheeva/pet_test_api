@@ -1,5 +1,18 @@
 # pet_test_api
-Pet project which demonstrates automation testing of REST API
+Pet project demonstrates automation testing of REST API using Python (3.12). 
+It uses:
+- _pytest_ for writing tests
+- _requests_ for sending REST API requests
+- _pydantic_ for json schemas creation and validation
+- _allure-pytests_ for generating reports
+
+It also contains examples of:
+- running tests in a Docker container
+- running tests in GitHub Actions (reports can be found on 
+Actions tab -> Workflows -> pages-build-deployment. 
+Open the last job and job _deploy_ will contain the link to Allure report)
+
+Service under the test: https://petstore.swagger.io/#/
 
 # Environment preparation
 ```shell
