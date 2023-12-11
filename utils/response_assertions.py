@@ -20,4 +20,4 @@ def validate_schema(model, json_object):
 
 def validate_fields(actual, expected):
     with allure.step(f"Validate fields. Actual: {actual}, Expected: {expected}"):
-        assert actual == expected, "Data from response should equels to expected"
+        assert actual == expected, "Data from response should equals to expected"

@@ -12,4 +12,4 @@ RUN apk update && apk upgrade && apk add bash
 
 COPY . .
 
-CMD pytest ./tests/test* --alluredir=allure-results
+CMD pytest ./tests/test*
