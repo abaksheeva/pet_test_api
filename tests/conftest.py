@@ -1,4 +1,6 @@
 from pathlib import Path
+
+import allure
 import pytest
 
 from model_generators.pet_generator import PetGenerator
@@ -10,6 +12,7 @@ def get_project_root_dir():
     return Path(__file__).absolute().parent.parent
 
 
+@allure.title("Create a new pet for the test")
 @pytest.fixture
 def create_pet():
     pet = PetGenerator.generate_new_pet()

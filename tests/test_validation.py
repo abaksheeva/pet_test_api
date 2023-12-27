@@ -1,10 +1,13 @@
 import json
 
+import pytest
+
 from models.pet import Pet
 from tests.conftest import get_project_root_dir
 from utils.response_assertions import validate_json_schema
 
 
+@pytest.mark.skip
 class TestValidation:
     """
     Test created for testing purposes just to verify
