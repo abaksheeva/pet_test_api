@@ -4,8 +4,9 @@ from jsonschema import validate
 
 
 def assert_status_code(status_code: int, expected_status_code: int = 200):
-    with allure.step(f"Assert that response status code is {expected_status_code}"):
-        assert status_code == expected_status_code, f"Response status code should be {expected_status_code}"
+    with (allure.step(f"Assert that response status code is {expected_status_code}")):
+        assert status_code == expected_status_code, (f"Response status code should be "
+                                                     f"{expected_status_code} but got {status_code}")
 
 
 def validate_json_schema(json_object, schema):

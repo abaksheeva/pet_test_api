@@ -9,18 +9,16 @@ from models.pet import statuses
 
 class PetGenerator:
 
-    def __init__(self):
-        self.pet = dict()
-
-    def generate_new_pet(self):
+    @staticmethod
+    def generate_new_pet():
         fake = Faker()
 
-        self.pet = dict()
-        self.pet['id'] = fake.random_number()
-        self.pet['category'] = CategoryGenerator.generate_new_category()
-        self.pet['name'] = fake.name()
-        self.pet['photoUrls'] = [fake.image_url()]
-        self.pet['tags'] = [TagGenerator.generate_new_tag()]
-        self.pet['status'] = random.choice(statuses)
+        pet = dict()
+        pet['id'] = fake.random_int(min=1000, max=9999)
+        pet['category'] = CategoryGenerator.generate_new_category()
+        pet['name'] = fake.name()
+        pet['photoUrls'] = [fake.image_url()]
+        pet['tags'] = [TagGenerator.generate_new_tag()]
+        pet['status'] = random.choice(statuses)
 
-        return self.pet
+        return pet
