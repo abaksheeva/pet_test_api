@@ -37,7 +37,7 @@ class PetClient:
     def update_pet(pet):
         url = f'{BASE_URL}/pet'
 
-        with allure.step(f"POST: Update an existing pet (Request URL: {url}, body: {json.dumps(pet)}"):
+        with allure.step(f"PUT: Update an existing pet (Request URL: {url}, body: {json.dumps(pet)}"):
             response = requests.put(url=url,
                                     headers=HEADER_CONTENT_TYPE_JSON | HEADER_ACCEPT,
                                     data=json.dumps(pet)
@@ -49,7 +49,7 @@ class PetClient:
     def find_pets_by_status(status):
         url = f'{BASE_URL}/pet/findByStatus'
 
-        with allure.step(f"POST: Find pets by status (Request URL: {url})"):
+        with allure.step(f"GET: Find pets by status (Request URL: {url})"):
             response = requests.get(url=url,
                                     headers=HEADER_ACCEPT,
                                     params={'status': status}
@@ -61,7 +61,7 @@ class PetClient:
     def find_pet_by_id(pet_id):
         url = f'{BASE_URL}/pet/{pet_id}'
 
-        with allure.step(f"POST: Find pet by ID (Request URL: {url})"):
+        with allure.step(f"GET: Find pet by ID (Request URL: {url})"):
             response = requests.get(url=url,
                                     headers=HEADER_ACCEPT
                                     )
@@ -89,7 +89,7 @@ class PetClient:
     def delete_pet(pet_id):
         url = f'{BASE_URL}/pet/{pet_id}'
 
-        with allure.step(f"POST: Delete a pet with ID = {pet_id} (Request URL: {url})"):
+        with allure.step(f"DELETE: Delete a pet with ID = {pet_id} (Request URL: {url})"):
             response = requests.delete(url=url,
                                        headers=HEADER_ACCEPT
                                        )

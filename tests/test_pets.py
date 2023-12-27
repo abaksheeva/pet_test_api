@@ -1,7 +1,10 @@
+import allure
 import pytest
 import random
 
+from model_generators.message_generator import MsgGenerator
 from model_generators.pet_generator import PetGenerator
+from models.message import Message
 from models.pet import Pet, statuses
 from api.pet_api import PetClient
 from models.pets import Pets
@@ -9,6 +12,7 @@ from models.pets import Pets
 from utils.response_assertions import assert_status_code, validate_schema, validate_fields
 
 
+@allure.feature("Tests for pets")
 class TestPetApi:
 
     @pytest.mark.pet
@@ -16,7 +20,7 @@ class TestPetApi:
         """
         Verify adding a new pet to the store
         """
-        pet = PetGenerator().generate_new_pet()
+        pet = PetGenerator.generate_new_pet()
 
         status_code, response_data = PetClient.add_pet(pet)
 
@@ -24,13 +28,12 @@ class TestPetApi:
         validate_schema(Pet, response_data)
         validate_fields(response_data, pet)
 
-    # TODO: look to POST vs PUT
     @pytest.mark.pet
     def test_updating_pet(self, create_pet):
         """
         Verify updating an existing pet
         """
-        pet = PetGenerator().generate_new_pet()
+        pet = PetGenerator.generate_new_pet()
 
         status_code, response_data = PetClient.update_pet(pet)
 
@@ -123,11 +126,11 @@ class TestPetApi:
         status_code, response_data = PetClient.delete_pet(create_pet['id'])
 
         assert_status_code(status_code)
-        validate_fields(response_data, {
-            'code': status_code,
-            'type': 'unknown',
-            'message': str(create_pet['id'])
-        })
+        validate_schema(Message, response_data)
+        validate_fields(response_data,
+                        MsgGenerator.generate_from(code=200,
+                                                   msg_type='unknown',
+                                                   message=str(create_pet['id'])))
 
         # Verify the pet was removed after calling /delete/{pet_id} endpoint
         status_code, response_data = PetClient.find_pet_by_id(create_pet['id'])

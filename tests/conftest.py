@@ -12,7 +12,7 @@ def get_project_root_dir():
 
 @pytest.fixture
 def create_pet():
-    pet = PetGenerator().generate_new_pet()
+    pet = PetGenerator.generate_new_pet()
     status_code, response_data = PetClient.add_pet(pet)
     assert_status_code(status_code)
     yield pet
