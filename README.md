@@ -5,6 +5,7 @@ It uses:
 - _requests_ for sending REST API requests
 - _pydantic_ for json schemas creation and validation
 - _allure-pytests_ for generating reports
+- _pytest-xdist_ for running tests in parallel
 
 It also contains examples of:
 - running tests in a Docker container
