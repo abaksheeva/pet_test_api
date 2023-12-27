@@ -1,0 +1,1 @@
+{"additionalProperties": false, "properties": {"code": {"title": "Code", "type": "integer"}, "type": {"title": "Type", "type": "string"}, "message": {"title": "Message", "type": "string"}}, "required": ["code", "type", "message"], "title": "Message", "type": "object"}

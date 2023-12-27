@@ -1,27 +1,11 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Dec 11 18:15:30 GMT 2023","Mon Dec 11 18:15:30 GMT 2023","77","","test_pets","TestPetApi","","","test_finding_pet_by_id","
-        Verify finding pet by ID
-        "
-"passed","Mon Dec 11 18:15:28 GMT 2023","Mon Dec 11 18:15:28 GMT 2023","116","","test_pets","TestPetApi","","","test_adding_pet","
-        Verify adding a new pet to the store
-        "
-"passed","Mon Dec 11 18:15:30 GMT 2023","Mon Dec 11 18:15:30 GMT 2023","9","","test_validation","TestValidation","","","test_jsonschema_validate",""
-"passed","Mon Dec 11 18:15:29 GMT 2023","Mon Dec 11 18:15:29 GMT 2023","111","","test_pets","TestPetApi","","","test_updating_pet_by_id_and_status","
-        Verify updating an existing pet
-        "
-"passed","Mon Dec 11 18:15:29 GMT 2023","Mon Dec 11 18:15:30 GMT 2023","134","","test_pets","TestPetApi","","","test_updating_pet_by_id_name_and_status","
-        Verify updating an existing pet
-        "
-"passed","Mon Dec 11 18:15:29 GMT 2023","Mon Dec 11 18:15:29 GMT 2023","137","","test_pets","TestPetApi","","","test_updating_pet_by_id_and_name","
-        Verify updating an existing pet
-        "
-"passed","Mon Dec 11 18:15:30 GMT 2023","Mon Dec 11 18:15:30 GMT 2023","0","","test_validation","TestValidation","","","test_pydantic_validate",""
-"passed","Mon Dec 11 18:15:29 GMT 2023","Mon Dec 11 18:15:29 GMT 2023","277","","test_pets","TestPetApi","","","test_updating_pet","
-        Verify updating an existing pet
-        "
-"passed","Mon Dec 11 18:15:30 GMT 2023","Mon Dec 11 18:15:30 GMT 2023","123","","test_pets","TestPetApi","","","test_delete_pet","
-        Verify deleting a pet
-        "
-"passed","Mon Dec 11 18:15:30 GMT 2023","Mon Dec 11 18:15:30 GMT 2023","55","","test_pets","TestPetApi","","","test_finding_pets_by_status","
-        Verify finding pets by statuses
-        "
+"skipped","Wed Dec 27 14:53:00 GMT 2023","Wed Dec 27 14:53:00 GMT 2023","0","","test_validation","TestValidation","","","test_pydantic_validate",""
+"passed","Wed Dec 27 14:52:59 GMT 2023","Wed Dec 27 14:53:00 GMT 2023","392","","Tests for pets","TestPetApi","","","Verify updating an existing pet",""
+"passed","Wed Dec 27 14:52:59 GMT 2023","Wed Dec 27 14:53:00 GMT 2023","219","","Tests for pets","TestPetApi","","","Verify updating an existing pet",""
+"passed","Wed Dec 27 14:52:59 GMT 2023","Wed Dec 27 14:53:00 GMT 2023","392","","Tests for pets","TestPetApi","","","Verify updating an existing pet",""
+"passed","Wed Dec 27 14:53:00 GMT 2023","Wed Dec 27 14:53:00 GMT 2023","272","","Tests for pets","TestPetApi","","","Verify finding pets by statuses",""
+"passed","Wed Dec 27 14:52:59 GMT 2023","Wed Dec 27 14:52:59 GMT 2023","369","","Tests for pets","TestPetApi","","","Verify adding a new pet to the store",""
+"passed","Wed Dec 27 14:52:59 GMT 2023","Wed Dec 27 14:52:59 GMT 2023","110","","Tests for pets","TestPetApi","","","Verify finding pet by ID",""
+"passed","Wed Dec 27 14:53:00 GMT 2023","Wed Dec 27 14:53:00 GMT 2023","500","","Tests for pets","TestPetApi","","","Verify deleting a pet",""
+"passed","Wed Dec 27 14:53:00 GMT 2023","Wed Dec 27 14:53:00 GMT 2023","323","","Tests for pets","TestPetApi","","","Verify updating an existing pet",""
+"skipped","Wed Dec 27 14:53:00 GMT 2023","Wed Dec 27 14:53:00 GMT 2023","0","","test_validation","TestValidation","","","test_jsonschema_validate",""
